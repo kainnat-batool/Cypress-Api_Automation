@@ -1,0 +1,17 @@
+{
+  "name": "cypress-api_automation",
+  "version": "1.0.0",
+  "description": "Cypress API Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kainnat Batool",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.3"
+  },
+  "dependencies": {
+    "javascript": "^1.0.0"
+  }
+}
