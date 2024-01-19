@@ -23,3 +23,50 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+Cypress.Commands.add('GetCall',()=>
+{
+    cy.request({
+        method:'Get',
+        url:'/',
+        headers:{
+            Authorization:'Bearer 9d59b5e58de84cdfff115a78df0147e31e3e7985c6554aac9817efd8530411e8'
+        }
+    })
+})
+
+Cypress.Commands.add('PostCall',(payload)=>
+{
+    cy.request({
+        method:'POST',
+        url:'/',
+        headers:{
+            Authorization:'Bearer 9d59b5e58de84cdfff115a78df0147e31e3e7985c6554aac9817efd8530411e8'
+        },
+        body:payload
+    })
+})
+
+Cypress.Commands.add('PutCall',(pathParams,payload)=>
+{
+    cy.request({
+        method:'PUT',
+        url:'/'+pathParams,
+        headers:{
+            Authorization:'Bearer 9d59b5e58de84cdfff115a78df0147e31e3e7985c6554aac9817efd8530411e8'
+        },
+        body:payload
+    })
+})
+
+Cypress.Commands.add('DeleteCall',(pathParams)=>
+{
+    cy.request({
+        method:'Delete',
+        url:'/'+pathParams,
+        headers:{
+            Authorization:'Bearer 9d59b5e58de84cdfff115a78df0147e31e3e7985c6554aac9817efd8530411e8'
+        }
+    })
+})
